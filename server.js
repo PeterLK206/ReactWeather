@@ -9,7 +9,6 @@ if (PORT !== 3000) {
         if (req.headers['x-forwarded-proto'] === 'https') {
             res.redirect('http://' + req.hostname + req.url);
         } else {
-            console.log('not an https');
             next();
         }
     });
